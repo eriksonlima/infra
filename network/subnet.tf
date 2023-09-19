@@ -35,3 +35,11 @@ resource "aws_subnet" "subnet_pub_2" {
     "Name" = "Subnet-Pub-2"
   }
 }
+
+data "aws_subnet" "subnet_priv_1" {
+  id = aws_subnet.subnet_priv_1.id
+}
+
+data "aws_subnet" "subnet_priv_2" {
+  id = aws_subnet.subnet_priv_2.id
+}
