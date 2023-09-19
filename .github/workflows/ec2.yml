@@ -1,4 +1,4 @@
-name: 'TF Network'
+name: 'TF EC2'
 
 on:
   push:
