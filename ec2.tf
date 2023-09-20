@@ -3,6 +3,7 @@ resource "aws_instance" "ec2_test_1" {
   ami           = "ami-04cb4ca688797756f"
   instance_type = "t2.micro"
   key_name      = "erikson"
+  iam_instance_profile = "InstanceIAM"
 }
 
 resource "aws_instance" "ec2_test_2" {
@@ -10,4 +11,5 @@ resource "aws_instance" "ec2_test_2" {
   ami           = "ami-04cb4ca688797756f"
   instance_type = "t2.micro"
   key_name      = "erikson"
+  iam_instance_profile = "InstanceIAM"
 }
