@@ -35,17 +35,3 @@ resource "aws_subnet" "subnet_pub_2" {
     "Name" = "Subnet-Pub-2"
   }
 }
-
-data "aws_subnet" "subnet_priv_1" {
-  filter {
-    name   = "tag:Name"
-    values = ["Subnet-Priv-1"]
-  }
-}
-
-data "aws_subnet" "subnet_priv_2" {
-  filter {
-    name   = "tag:Name"
-    values = ["Subnet-Priv-2"]
-  }
-}
