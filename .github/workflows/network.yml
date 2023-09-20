@@ -20,6 +20,7 @@ jobs:
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
+        working-directory: ./network
         shell: bash
 
     steps:
@@ -55,3 +56,4 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
       run: terraform apply -auto-approve -input=false
+      
