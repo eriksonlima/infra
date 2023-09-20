@@ -35,7 +35,7 @@ resource "aws_route_table" "rtb_priv_1" {
 resource "aws_route" "rt_priv_1" {
   route_table_id         = aws_route_table.rtb_priv_1.id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_nat_gateway.ngw_priv_1.id
+  nat_gateway_id         = aws_nat_gateway.ngw_priv_1.id
 }
 
 resource "aws_route_table_association" "rtb_association_priv_1" {
@@ -50,7 +50,7 @@ resource "aws_route_table" "rtb_priv_2" {
 resource "aws_route" "rt_priv_2" {
   route_table_id         = aws_route_table.rtb_priv_2.id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_nat_gateway.ngw_priv_2.id
+  nat_gateway_id         = aws_nat_gateway.ngw_priv_2.id
 }
 
 resource "aws_route_table_association" "rtb_association_priv_2" {
