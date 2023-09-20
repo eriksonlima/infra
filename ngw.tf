@@ -1,9 +1,9 @@
 resource "aws_eip" "nat_gateway_1" {
-  instance = aws_nat_gateway.ngw.id
+  instance = aws_nat_gateway.ngw_1.id
 }
 
 resource "aws_eip" "nat_gateway_2" {
-  instance = aws_nat_gateway.ngw.id
+  instance = aws_nat_gateway.ngw_2.id
 }
 
 resource "aws_nat_gateway" "ngw_1" {
